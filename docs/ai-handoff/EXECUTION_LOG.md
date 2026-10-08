@@ -2,6 +2,13 @@
 
 格式：每則含 日期 / 動作 / 指令或檔案 / 結果。最新在最上。
 
+## 2026-10-08 22:34 — KMM 計算機 Phase 1（骨架＋共享引擎）
+
+- 動作：3 個並行 subagent 設計收斂（`ses_ee40fd9a` 引擎 / `ses_ee40fd99` 骨架 / `ses_ee40fd98` Android UI）
+  - 結果：5 檔引擎（`CalculatorState`/`Calculator`/`Tokenizer`/`Evaluator`/`Format`）＋13 測試；Gradle pin `Kotlin 2.1.20 / AGP 8.5.2 / Gradle 8.7`；UI 4x5 矩陣；`%` 語義調和（見 U-005）
+- 動作：寫入根設定＋`shared`＋`.gitignore`＋`TIMELOG.md`（共 14 新增，預算 45 內）
+  - 結果：待 commit；驗證待 Studio sync（`ANDROID_HOME` 未設，改用 `local.properties` 指 SDK）
+
 ## 2026-10-08 — push 到 GitHub
 
 - 動作：加入 remote 並推送

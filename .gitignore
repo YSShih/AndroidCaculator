@@ -1,0 +1,21 @@
+# ---> Android / Kotlin / Gradle
+.gradle/
+build/
+local.properties
+*.iml
+.idea/
+# Keystore
+*.jks
+*.keystore
+# ---> Kotlin/Native
+*.kexe
+*.framework/
+*.xcframework/
+# ---> Xcode / iOS
+iosApp/build/
+iosApp/*.xcworkspace/
+DerivedData/
+*.xcodeproj/xcuserdata/
+# ---> OS
+.DS_Store
+Thumbs.db
