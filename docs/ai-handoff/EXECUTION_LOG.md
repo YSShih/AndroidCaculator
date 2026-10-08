@@ -2,6 +2,13 @@
 
 格式：每則含 日期 / 動作 / 指令或檔案 / 結果。最新在最上。
 
+## 2026-10-08 22:36 — KMM Phase 2（Android UI＋iOS 源碼）
+
+- 動作：`androidApp`（Manifest＋`MainActivity`＋`CalculatorViewModel(StateFlow)`＋`CalculatorScreen` 4x6 矩陣：`() AC ⌫ / C % ± ÷ / 7 8 9 × / 4 5 6 − / 1 2 3 + / 0 . ＝(跨2欄)`，錯誤紅字，深淺色/無障礙按設計 agent 規格）
+- 動作：`shared/CalculatorStore.kt`（`dispatch` 包裝，供 Swift 側簡化調用）
+- 動作：`iosApp/iosApp.swift`＋`ContentView.swift`（`ObservableObject`＋同矩陣）＋`接線說明.md`（macOS 步驟，`UNVERIFIED_ON_WINDOWS`）
+- 結果：待 commit＋push；Android 待 Studio sync＋`assembleDebug`＋模擬器驗證；iOS 待 macOS 補驗
+
 ## 2026-10-08 22:34 — KMM 計算機 Phase 1（骨架＋共享引擎）
 
 - 動作：3 個並行 subagent 設計收斂（`ses_ee40fd9a` 引擎 / `ses_ee40fd99` 骨架 / `ses_ee40fd98` Android UI）
