@@ -2,6 +2,14 @@
 
 格式：每則含 日期 / 動作 / 指令或檔案 / 結果。最新在最上。
 
+## 2026-10-08 — push 到 GitHub
+
+- 動作：加入 remote 並推送
+  - 指令：
+    - `git remote add origin https://github.com/YSShih/AndroidCaculator.git`
+    - `git push -u origin master`
+  - 結果：`master -> master`，`master` 已追蹤 `origin/master`
+
 ## 2026-10-08 — 初始化 + 交接文件 + 首次 commit
 
 - 動作：`git init`
