@@ -44,7 +44,7 @@ struct ContentView: View {
                     KeyButton("(", "左括號") { model.send(CalculatorAction.LeftParen()) }
                     KeyButton(")", "右括號") { model.send(CalculatorAction.RightParen()) }
                     KeyButton("AC", "全部清除") { model.send(CalculatorAction.ClearAll()) }
-                    KeyButton("⌫", "刪除") { model.send(CalculatorAction.Backspace()) }
+                    KeyButton("←", "刪除") { model.send(CalculatorAction.Backspace()) }
                     KeyButton("C", "清除輸入") { model.send(CalculatorAction.ClearEntry()) }
                     KeyButton("%", "百分比") { model.send(CalculatorAction.Percent()) }
                     KeyButton("±", "正負號") { model.send(CalculatorAction.ToggleSign()) }

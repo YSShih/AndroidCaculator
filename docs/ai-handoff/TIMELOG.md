@@ -16,6 +16,8 @@
 | 2026-10-08 | 22:5x | 實編 #1 失敗：`:androidApp:compileDebugKotlin` JVM-target 不一致（Kotlin 21 vs Java 17）；另 SDK 自動裝好 Build-Tools 34＋Platform 34 | 修 `androidApp` 加 `kotlinOptions.jvmTarget="17"`，收官方 wrapper 產物，重跑 |
 | 2026-10-08 | 22:5x | 實編 #2：主程式編過，`testDebugUnitTest` 13 中 2 敗（`mismatched`／`backspace` 斷言與 `reduce` 守衛語義不合，引擎行為正確） | 修正測試期望（ stray `)` 忽略、求值後刪除重置），重跑 |
 | 2026-10-08 | 22:5x | 實編 #3：BUILD SUCCESSFUL（`assembleDebug`＋13/13 測試，commit `f945c24`） | 啟動模擬器（`Pixel_3a_API_35`）裝機驗收，背景執行中 |
+| 2026-10-08 | 22:46 | 模擬器驗收：安裝＋啟動成功，截圖確認 4x6 UI；adb 點按 `1+2×3=` 顯示 `7`（端到端 PASS） | 發現 `⌫` 缺字（tofu）→先改 `DEL` 又太寬被截→定案 `←`，Android＋iOS 一致 |
+| 2026-10-08 | 22:47 | `←` 重編＋重裝＋截圖確認正常；清暫存截圖；README 定稿；commit＋push 收尾 | 待執行 |
 
 ## 環境證據
 - `C:\Program Files\Android\Android Studio` 存在；`%LOCALAPPDATA%\Android\Sdk\platform-tools\adb.exe`＝True；`emulator\emulator.exe`＝True

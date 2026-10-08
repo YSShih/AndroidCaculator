@@ -38,7 +38,7 @@ private val rows: List<List<Key>> = listOf(
         Key("(", "左括號", CalculatorAction.LeftParen),
         Key(")", "右括號", CalculatorAction.RightParen),
         Key("AC", "全部清除", CalculatorAction.ClearAll),
-        Key("⌫", "刪除", CalculatorAction.Backspace),
+        Key("←", "刪除", CalculatorAction.Backspace),
     ),
     listOf(
         Key("C", "清除輸入", CalculatorAction.ClearEntry),

@@ -2,6 +2,15 @@
 
 格式：每則含 日期 / 動作 / 指令或檔案 / 結果。最新在最上。
 
+## 2026-10-08 22:46 — 模擬器驗收＋刪除鍵修正＋收尾
+
+- 動作：`Pixel_3a_API_35` 安裝＋啟動＋截圖，adb 按 content-desc 點按 `1+2×3=` → 顯示 `7`
+  - 結果：端到端 PASS；截圖見驗收當下（暫存檔已清，未進 repo）
+- 動作：`⌫` 在 Roboto 缺字 → `DEL` 太寬被截 → 定案 `←`（`CalculatorScreen.kt`＋`ContentView.swift` 一致）
+  - 結果：重編＋重裝＋截圖確認正常
+- 動作：README 定稿（結構／語義／建置／iOS／協作模型），清 `.tmp_*.png`
+  - 結果：待 commit＋push
+
 ## 2026-10-08 22:36 — KMM Phase 2（Android UI＋iOS 源碼）
 
 - 動作：`androidApp`（Manifest＋`MainActivity`＋`CalculatorViewModel(StateFlow)`＋`CalculatorScreen` 4x6 矩陣：`() AC ⌫ / C % ± ÷ / 7 8 9 × / 4 5 6 − / 1 2 3 + / 0 . ＝(跨2欄)`，錯誤紅字，深淺色/無障礙按設計 agent 規格）
