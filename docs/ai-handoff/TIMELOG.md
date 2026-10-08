@@ -13,6 +13,7 @@
 | 2026-10-08 | 22:38 | 演算法驗證：Python 等價移植 15/15（優先順序、括號、求餘、`0.1+0.2→0.3`、除零/格式/括號/溢位） | 邏輯 PASS；Kotlin 語法待 Gradle 實編 |
 | 2026-10-08 | 22:38 | 新增最小 `gradlew`/`gradlew.bat`（commit `a4ab10e` 已 push），啟動背景實編（Gradle 8.7＋JBR 17＋`assembleDebug`） | 背景執行中，待通知 |
 | 2026-10-08 | 22:4x | 背景任務完成：Gradle 8.7 已裝好（`%LOCALAPPDATA%\Gradle\gradle-8.7`），Studio JBR 實為 Java 21（AGP 8.5.2 可用） | 續跑官方 `gradle wrapper`＋`:androidApp:assembleDebug`，背景執行中 |
+| 2026-10-08 | 22:5x | 實編 #1 失敗：`:androidApp:compileDebugKotlin` JVM-target 不一致（Kotlin 21 vs Java 17）；另 SDK 自動裝好 Build-Tools 34＋Platform 34 | 修 `androidApp` 加 `kotlinOptions.jvmTarget="17"`，收官方 wrapper 產物，重跑 |
 
 ## 環境證據
 - `C:\Program Files\Android\Android Studio` 存在；`%LOCALAPPDATA%\Android\Sdk\platform-tools\adb.exe`＝True；`emulator\emulator.exe`＝True
