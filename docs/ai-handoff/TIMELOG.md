@@ -9,7 +9,9 @@
 | 2026-10-08 | 22:34 | 環境盤點：Java 20、Studio 在 `C:\Program Files\Android\Android Studio`、SDK 在 `%LOCALAPPDATA%\Android\Sdk`（`adb.exe`、`emulator.exe` 存在）、`ANDROID_HOME` 未設、無 `gradle` CLI | 以 `local.properties` 指 SDK，Gradle 由 Studio/wrapper 提供 |
 | 2026-10-08 | 22:4x | Phase 1：根 Gradle 設定（`settings`/`build`/`libs.versions`/`wrapper`/`gradle.properties`）+ `shared` 模組（`CalculatorState`/`Calculator`/`Tokenizer`/`Evaluator`/`Format`＋13 個 `commonTest`）+ `.gitignore` | 待 commit，待 Studio sync 驗證 |
 | 2026-10-08 | 22:4x | Phase 2（待）：`androidApp` Compose UI＋`iosApp` SwiftUI 源碼 | 未開始 |
-| 2026-10-08 | 22:36-22:4x | Phase 2：`androidApp`（`build.gradle`/`AndroidManifest`/`MainActivity`/`ViewModel`/`CalculatorScreen` 4x6 矩陣）＋`shared/CalculatorStore`（供 Swift 調用）＋`iosApp`（`iosApp.swift`/`ContentView.swift`/接線說明，標 `UNVERIFIED_ON_WINDOWS`） | 待 commit＋push＋Studio sync 驗證 |
+| 2026-10-08 | 22:36-22:37 | Phase 1 commit `d1c544b`＋Phase 2 commit `52d3c9d`＋push | `master -> master`，乾淨；發現 AVD `Pixel_3a_API_35`、Studio JBR 17 可用 |
+| 2026-10-08 | 22:38 | 演算法驗證：Python 等價移植 15/15（優先順序、括號、求餘、`0.1+0.2→0.3`、除零/格式/括號/溢位） | 邏輯 PASS；Kotlin 語法待 Gradle 實編 |
+| 2026-10-08 | 22:38 | 新增最小 `gradlew`/`gradlew.bat`（commit `a4ab10e` 已 push），啟動背景實編（Gradle 8.7＋JBR 17＋`assembleDebug`） | 背景執行中，待通知 |
 
 ## 環境證據
 - `C:\Program Files\Android\Android Studio` 存在；`%LOCALAPPDATA%\Android\Sdk\platform-tools\adb.exe`＝True；`emulator\emulator.exe`＝True
