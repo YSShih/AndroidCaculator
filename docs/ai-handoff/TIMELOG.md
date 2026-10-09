@@ -21,6 +21,7 @@
 | 2026-10-09 | 11:00 | macOS 接手：修 `local.properties`（Mac SDK 路徑＋env 優先順序說明，gitignore 不進版控） | 本機生效 |
 | 2026-10-09 | 11:0x | 新建 `iosApp/iosApp.xcodeproj`，`xcodebuild -list` 解析成功，Xcode 可開 | 待實機＋實編確認 |
 | 2026-10-09 | 11:15-11:49 | iOS 實編 8 輪修 7 錯（asset path／group path／Store 無參建構子／body 拆分／Action 扁平化＋unichar／Group 拆三／CFBundleVersion），BUILD SUCCEED，simctl 安裝啟動截圖正常 | 按鍵實點待手動驗 |
+| 2026-10-09 | 12:0x | `git push origin master`（PAT 存 osxkeychain），`17322a8..6966bd4` 已上 GitHub | 成功 |
 
 ## 環境證據
 - `C:\Program Files\Android\Android Studio` 存在；`%LOCALAPPDATA%\Android\Sdk\platform-tools\adb.exe`＝True；`emulator\emulator.exe`＝True

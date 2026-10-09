@@ -2,6 +2,11 @@
 
 格式：每則含 日期 / 動作 / 指令或檔案 / 結果。最新在最上。
 
+## 2026-10-09 12:0x — push macOS 兩個 commit 到 GitHub
+
+- 動作：`git push origin master`（本機 Mac 無現成認證，改用使用者提供的 PAT 存 osxkeychain 後推送）
+  - 結果：`17322a8..6966bd4 master -> master` 成功
+
 ## 2026-10-09 11:49 — iOS 實編通過＋模擬器驗收
 
 - 動作：8 輪 `xcodebuild`（Debug＋iPhone 14 模擬器），修 7 個錯：
