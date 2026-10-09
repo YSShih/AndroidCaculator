@@ -2,6 +2,14 @@
 
 格式：每則含 日期 / 動作 / 指令或檔案 / 結果。最新在最上。
 
+## 2026-10-09 11:00 — macOS 接手：local.properties＋Xcode 可開專案
+
+- 動作：`local.properties` 改為 Mac 路徑＋環境變數說明（`sdk.dir=/Users/jason/Library/Android/sdk`，AGP 順序 `sdk.dir > ANDROID_HOME > ANDROID_SDK_ROOT > 預設`）
+  - 結果：本機生效；該檔 gitignore，不進版控
+- 動作：新建 `iosApp/iosApp.xcodeproj/project.pbxproj`（單 Target `iosApp`，含 `Compile Kotlin Framework` script phase 調 `embedAndSignAppleFrameworkForXcode`，`FRAMEWORK_SEARCH_PATHS` 指 `shared/build/XCFrameworks`，`OTHER_LDFLAGS -framework shared`，deployment target 15.0，bundle `com.calc.CalculatorKMM`）
+  - 結果：`xcodebuild -list` 解析成功（Targets: iosApp，Schemes: iosApp 自動產生）；Xcode 可直接開啟
+- 待辦：Xcode 設定 Team＋Bundle ID，接 iPhone 實機 Run；`shared` XCFramework 首次編譯＋Swift 符號（`BinaryOp` 大小寫）待實編確認
+
 ## 2026-10-08 22:46 — 模擬器驗收＋刪除鍵修正＋收尾
 
 - 動作：`Pixel_3a_API_35` 安裝＋啟動＋截圖，adb 按 content-desc 點按 `1+2×3=` → 顯示 `7`

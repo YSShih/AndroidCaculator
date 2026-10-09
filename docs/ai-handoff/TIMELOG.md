@@ -18,6 +18,8 @@
 | 2026-10-08 | 22:5x | 實編 #3：BUILD SUCCESSFUL（`assembleDebug`＋13/13 測試，commit `f945c24`） | 啟動模擬器（`Pixel_3a_API_35`）裝機驗收，背景執行中 |
 | 2026-10-08 | 22:46 | 模擬器驗收：安裝＋啟動成功，截圖確認 4x6 UI；adb 點按 `1+2×3=` 顯示 `7`（端到端 PASS） | 發現 `⌫` 缺字（tofu）→先改 `DEL` 又太寬被截→定案 `←`，Android＋iOS 一致 |
 | 2026-10-08 | 22:47 | `←` 重編＋重裝＋截圖確認正常；清暫存截圖；README 定稿；commit＋push 收尾 | 待執行 |
+| 2026-10-09 | 11:00 | macOS 接手：修 `local.properties`（Mac SDK 路徑＋env 優先順序說明，gitignore 不進版控） | 本機生效 |
+| 2026-10-09 | 11:0x | 新建 `iosApp/iosApp.xcodeproj`，`xcodebuild -list` 解析成功，Xcode 可開 | 待實機＋實編確認 |
 
 ## 環境證據
 - `C:\Program Files\Android\Android Studio` 存在；`%LOCALAPPDATA%\Android\Sdk\platform-tools\adb.exe`＝True；`emulator\emulator.exe`＝True
