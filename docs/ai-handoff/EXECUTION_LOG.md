@@ -2,6 +2,22 @@
 
 格式：每則含 日期 / 動作 / 指令或檔案 / 結果。最新在最上。
 
+## 2026-10-09 11:49 — iOS 實編通過＋模擬器驗收
+
+- 動作：8 輪 `xcodebuild`（Debug＋iPhone 14 模擬器），修 7 個錯：
+  1. `DEVELOPMENT_ASSET_PATHS` 指不存在的 Preview Content（刪）
+  2. pbxproj source group 多一層 `path = iosApp`（改虛擬 group）
+  3. `CalculatorStore()` 無參數 init 不可用（`CalculatorStore.kt` 加次建構子；Swift 看不到 Kotlin 預設參數）
+  4. `body` ViewBuilder 超時→拆 `displayView`＋`keypadView`
+  5. `CalculatorAction.Digit` 不存在（扁平化為 `CalculatorActionDigit`，`Char`＝`unichar`；`CalcModel` 加 `digit/op/dot/...` helper）
+  6. 單一 `Group` 23 鍵超 ViewBuilder 上限→拆 `keypadTop/Mid/Bottom`
+  7. 自動 Info.plist 缺 `CFBundleVersion`（補 `MARKETING_VERSION`＋`CURRENT_PROJECT_VERSION`）
+  - 結果：`** BUILD SUCCEEDED **`；`shared` framework（iosX64）＋Swift 全過
+- 動作：`simctl` 安裝＋啟動＋截圖（`com.calc.CalculatorKMM` pid 15254）
+  - 結果：畫面正常（顯示 `0`＋23 鍵齊全）；按鍵→dispatch 實點待使用者在已開機的模擬器上手動驗（`1+2×3=` 應得 `7`）
+- 動作：修正 `接線說明.md` 錯誤舊說（Char＝String、`BinaryOp` 大小寫）
+  - 結果：待 commit
+
 ## 2026-10-09 11:00 — macOS 接手：local.properties＋Xcode 可開專案
 
 - 動作：`local.properties` 改為 Mac 路徑＋環境變數說明（`sdk.dir=/Users/jason/Library/Android/sdk`，AGP 順序 `sdk.dir > ANDROID_HOME > ANDROID_SDK_ROOT > 預設`）
